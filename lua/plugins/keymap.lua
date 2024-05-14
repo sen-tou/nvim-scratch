@@ -10,4 +10,6 @@ vim.keymap.set('t', "<C-\\><C-n>", '<Leader><ESC>', { noremap = true, silent = t
 
 vim.keymap.set('n', '<Up>', ':<Up>', { desc = 'Switch through last command without typing' })
 
+vim.keymap.set('n', '<ESC>', '<cmd>nohlsearch<CR>', { desc = 'Remove search highlight' })
+
 return {}
