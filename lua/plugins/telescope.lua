@@ -18,35 +18,8 @@ return {
         },
     },
     config = function()
-        local telescope = require("telescope")
-        local builtin = require("telescope.builtin")
-
-        -- Telescope setup
-        telescope.setup({
-            defaults = {
-                vimgrep_arguments = {
-                    'rg',
-                    '--no-heading', 
-                    -- '--with-filename', 
-                    '--line-number', 
-                    '--column',
-                    '--smart-case', 
-                    '--hidden',
-                    -- '--glob', '!*' -- Excludes file names, focusing on content
-                }
-            },
-            pickers = {
-                find_files = {
-                    hidden = true,
-                    file_ignore_patterns = {"node_modules", ".git", "vendor", ".ssh"}
-                }
-            },
-            extensions = {
-                ['ui-select'] = {
-                    require("telescope.themes").get_dropdown({})
-                }
-            }
-        })
+        local telescope = require('telescope')
+        local builtin = require('telescope.builtin')
 
         -- Load extensions
         pcall(telescope.load_extension, 'fzf')
@@ -57,5 +30,30 @@ return {
         vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
         vim.keymap.set('n', '<leader> ', builtin.buffers, { desc = 'Telescope buffers' })
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
-    end
+    end,
+    opts = {
+        defaults = {
+            vimgrep_arguments = {
+                'rg',
+                '--no-heading', 
+                -- '--with-filename', 
+                '--line-number', 
+                '--column',
+                '--smart-case', 
+                '--hidden',
+                -- '--glob', '!*' -- Excludes file names, focusing on content
+            }
+        },
+        pickers = {
+            find_files = {
+                hidden = true,
+                file_ignore_patterns = {'node_modules', '.git', 'vendor', '.ssh'}
+            }
+        },
+        extensions = {
+            ['ui-select'] = {
+                require('telescope.themes').get_dropdown({})
+            }
+        }
+    }
 }

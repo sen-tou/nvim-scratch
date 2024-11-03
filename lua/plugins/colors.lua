@@ -1,10 +1,10 @@
 return {
-    "Shatur/neovim-ayu",
+    'Shatur/neovim-ayu',
     lazy = false,
     config = function()
-        vim.cmd.colorscheme "ayu-dark"
+        vim.cmd.colorscheme 'ayu-dark'
 
-        local colors = require("ayu.colors")
+        local colors = require('ayu.colors')
         colors.generate(true)
 
         vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })

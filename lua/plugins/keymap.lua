@@ -12,4 +12,8 @@ vim.keymap.set('n', '<Up>', ':<Up>', { desc = 'Switch through last command witho
 
 vim.keymap.set('n', '<ESC>', '<cmd>nohlsearch<CR>', { desc = 'Remove search highlight' })
 
+-- stay in visual mode after indenting
+vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
+vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
+
 return {}
