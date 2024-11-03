@@ -14,7 +14,7 @@ return {
         { 'nvim-telescope/telescope-ui-select.nvim' },
         { 
             'nvim-tree/nvim-web-devicons', 
-            enabled = vim.g.have_nerd_font  -- Requires a Nerd Font for pretty icons
+            enabled = vim.g.have_nerd_font  -- Requires a Nerd Font for pretty icons 
         },
     },
     config = function()
@@ -32,18 +32,7 @@ return {
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
     end,
     opts = {
-        defaults = {
-            vimgrep_arguments = {
-                'rg',
-                '--no-heading', 
-                -- '--with-filename', 
-                '--line-number', 
-                '--column',
-                '--smart-case', 
-                '--hidden',
-                -- '--glob', '!*' -- Excludes file names, focusing on content
-            }
-        },
+        -- TODO: figure out of that works or if I have to setup hidden separatly
         pickers = {
             find_files = {
                 hidden = true,
