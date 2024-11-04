@@ -12,8 +12,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-_G.utils = require('utils')
--- load plugins from plugins folder lua/plugins
 require('lazy').setup({{
     import = 'plugins'
 }}, {

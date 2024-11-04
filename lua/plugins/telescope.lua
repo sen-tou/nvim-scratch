@@ -2,6 +2,7 @@ return {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.8',
     event = 'VimEnter',
+
     dependencies = {
         'nvim-lua/plenary.nvim',
         { -- Telescope FZF Native for faster sorting
@@ -17,6 +18,7 @@ return {
             enabled = vim.g.have_nerd_font  -- Requires a Nerd Font for pretty icons 
         },
     },
+
     config = function()
         local telescope = require('telescope')
         local builtin = require('telescope.builtin')
@@ -31,6 +33,7 @@ return {
         vim.keymap.set('n', '<leader> ', builtin.buffers, { desc = 'Telescope buffers' })
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
     end,
+
     opts = {
         -- TODO: figure out of that works or if I have to setup hidden separatly
         pickers = {
