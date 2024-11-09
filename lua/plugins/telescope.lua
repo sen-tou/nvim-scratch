@@ -23,6 +23,22 @@ return {
         local telescope = require('telescope')
         local builtin = require('telescope.builtin')
 
+        telescope.setup {
+            defaults = {
+                file_ignore_patterns = {'node_modules', '.git', 'vendor', '.ssh'}
+            },
+            pickers = {
+                find_files = {
+                    hidden = true
+                }
+            },
+            extensions = {
+                ['ui-select'] = {
+                    require('telescope.themes').get_dropdown({})
+                }
+            }
+        }
+
         -- Load extensions
         pcall(telescope.load_extension, 'fzf')
         pcall(telescope.load_extension, 'ui-select')
@@ -33,19 +49,4 @@ return {
         vim.keymap.set('n', '<leader> ', builtin.buffers, { desc = 'Telescope buffers' })
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
     end,
-
-    opts = {
-        -- TODO: figure out of that works or if I have to setup hidden separatly
-        pickers = {
-            find_files = {
-                hidden = true,
-                file_ignore_patterns = {'node_modules', '.git', 'vendor', '.ssh'}
-            }
-        },
-        extensions = {
-            ['ui-select'] = {
-                require('telescope.themes').get_dropdown({})
-            }
-        }
-    }
 }
