@@ -16,6 +16,10 @@ vim.keymap.set('n', '<ESC>', '<cmd>nohlsearch<CR>', { desc = 'Remove search high
 vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
 vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
 
+-- move higligthed lines up and down
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+
 vim.keymap.set({'n', 'v'}, '<leader>p', '"_p', { noremap = true, silent = true, desc = 'Paste without affecting the current register' })
 vim.keymap.set({'n', 'v'}, '<leader>d', '"_d', { noremap = true, silent = true, desc = 'Delete without affecting the current register' })
 
