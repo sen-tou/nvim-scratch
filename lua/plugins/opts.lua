@@ -22,6 +22,6 @@ vim.opt.softtabstop = 4
 
 -- status line settings
 vim.opt.laststatus = 3
-vim.opt.cmdheight = 0
+-- vim.opt.cmdheight = 0
 
 return {}
