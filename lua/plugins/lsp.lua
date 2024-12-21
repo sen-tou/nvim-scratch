@@ -101,21 +101,28 @@ return {
         end,
     },
 
-    { -- optional blink completion source for require statements and module annotations
+
+    {
         'saghen/blink.cmp',
         version = 'v0.*',
         opts = {
             sources = {
                 -- add lazydev to your completion providers
-                completion = {
-                    enabled_providers = { 'lsp', 'path', 'snippets', 'buffer', 'lazydev' },
+                default = {
+                    'lsp', 'path', 'snippets', 'buffer', 'lazydev'
                 },
                 providers = {
-                    -- dont show LuaLS require statements when lazydev has items
-                    lsp = { fallback_for = { 'lazydev' } },
-                    lazydev = { name = 'LazyDev', module = 'lazydev.integrations.blink' },
+                    -- adjust fallback configuration
+                    lsp = {
+                        fallbacks = { 'lazydev' }
+                    },
+                    lazydev = {
+                        name = 'LazyDev',
+                        module = 'lazydev.integrations.blink'
+                    },
                 },
             },
         },
     }
+
 }
