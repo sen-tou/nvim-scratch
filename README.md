@@ -18,3 +18,4 @@ This is a tiny reference for the lousy brain that forgets things fast.
 
 - Jump to Hyperlink under Cursor: `CTRL-]`
 - Jump back (repeateable): `CRTL-O` (CTRL-T is also possible but a but different I guess, didn't research yet)
+
