@@ -2,7 +2,9 @@ require "core.utils"
 require "core.keymap"
 require "core.opts"
 
+-- custom theme setup
 local blueberry = require "blueberry"
+blueberry.colorscheme()
 
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -19,10 +21,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({ {
     import = "plugins",
-} }, {
-    defaults = {
-    },
-})
+} })
 
--- custom theme setup
-blueberry.colorscheme()
+-- setup lsp neovim 0.11
+vim.lsp.enable({'clangd', 'lua_ls'})
