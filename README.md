@@ -23,3 +23,8 @@ This is a tiny reference for the lousy brain that forgets things fast.
 
 - lsp actions (rename, implementation, references) `gr`-subcommands
 - diagnostics: `]d` next diagnostics, `]D` last diagnostics 
+
+# References
+
+- A reference for quick search and replace actions https://freedium.cfd/https://itnext.io/10-neo-vim-search-and-replace-tips-2ec09c442e60
+
