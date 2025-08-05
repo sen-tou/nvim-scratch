@@ -16,5 +16,6 @@ return {
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help_tags' })
         vim.keymap.set('n', '<leader>fs', builtin.symbols, { desc = 'Telescope symbols' })
         vim.keymap.set('n', '<leader>fq', builtin.quickfix, { desc = 'Telescope quickfix' })
+        vim.keymap.set('n', '<leader>fk', builtin.keymaps, { desc = 'Telescope keymaps' })
     end,
 }

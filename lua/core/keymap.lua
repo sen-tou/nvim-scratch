@@ -24,12 +24,8 @@ vim.keymap.set('n', '<ESC>', '<cmd>nohlsearch<CR>', m(opts, { desc = 'Remove sea
 vim.keymap.set('n', '<C-c>', '<cmd>nohlsearch<CR>', m(opts, { desc = 'Remove search highlight' }))
 
 -- stay in visual mode after indenting
-vim.keymap.set('v', '>', '>gv', m(opts, { desc = '' }))
-vim.keymap.set('v', '<', '<gv', m(opts, { desc = '' }))
-
--- move higligthed lines up and down
-vim.keymap.set('v', 'J', ':m ">+1<CR>gv=gv', m(opts, { desc = '' }))
-vim.keymap.set('v', 'K', ':m "<-2<CR>gv=gv', m(opts, { desc = '' }))
+vim.keymap.set('v', '>', '>gv', m(opts, { desc = 'stay in visual mode after indenting right' }))
+vim.keymap.set('v', '<', '<gv', m(opts, { desc = 'stay in visual mode after indenting left' }))
 
 vim.keymap.set({ 'n', 'v' }, '<leader>p', '"_p', m(opts, { desc = 'Paste without affecting the current register' }))
 vim.keymap.set({ 'n', 'v' }, '<leader>d', '"_d', m(opts, { desc = 'Delete without affecting the current register' }))

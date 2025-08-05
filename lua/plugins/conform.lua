@@ -12,7 +12,7 @@ return {
     },
     keys = {
         {
-            '<leader>ff',
+            '<leader>cf',
             function()
                 require('conform').format()
             end,
