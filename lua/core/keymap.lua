@@ -28,6 +28,8 @@ vim.keymap.set('v', '>', '>gv', m(opts, { desc = 'stay in visual mode after inde
 vim.keymap.set('v', '<', '<gv', m(opts, { desc = 'stay in visual mode after indenting left' }))
 
 vim.keymap.set({ 'n', 'v' }, '<leader>p', '"_p', m(opts, { desc = 'Paste without affecting the current register' }))
+vim.keymap.set({ 'n', 'v' }, 'P', '"+p', m(opts, { desc = 'Paste from clipboard' }))
+vim.keymap.set({ 'n', 'v' }, 'Y', '"+y', m(opts, { desc = 'Copy from clipboard' }))
 vim.keymap.set({ 'n', 'v' }, '<leader>d', '"_d', m(opts, { desc = 'Delete without affecting the current register' }))
 vim.keymap.set('n', 'x', '"_x', m(opts, { desc = 'Delete char without copy to clipboard' }))
 
