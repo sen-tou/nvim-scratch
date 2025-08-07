@@ -25,7 +25,7 @@ require('lazy').setup { {
 } }
 
 -- setup lsp neovim 0.11
-vim.lsp.enable { 'clangd', 'lua_ls', 'cmake' }
+vim.lsp.enable { 'clangd', 'lua_ls', 'cmake', 'json-lsp' }
 vim.diagnostic.config {
     virtual_text = { current_line = true },
 }
