@@ -2,10 +2,12 @@ local M = {}
 
 table.insert(M, {
     'mason-org/mason.nvim',
+    opts = {},
 })
 
 table.insert(M, {
     'mason-org/mason-lspconfig.nvim',
+    opts = {},
 })
 
 table.insert(M, {

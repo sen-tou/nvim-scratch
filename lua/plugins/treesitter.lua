@@ -13,4 +13,5 @@ return {
         'markdown',
         'markdown_inline',
     },
+    opts = {},
 }
