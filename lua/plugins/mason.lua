@@ -17,7 +17,7 @@ table.insert(M, {
         require('mason-lspconfig').setup()
         require('mason-tool-installer').setup {
             ensure_installed = {
-                'lua_ls',
+                'lua_ls', 'cmake', 'jsonls', 'clangd'
             },
         }
     end,

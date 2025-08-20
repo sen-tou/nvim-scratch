@@ -65,6 +65,7 @@ function M.colorscheme()
 
     vim.o.background = 'dark'
     vim.g.colors_name = 'blueberry'
+    vim.cmd.colorscheme = 'blueberry'
 
     local set = vim.api.nvim_set_hl
 
@@ -72,4 +73,5 @@ function M.colorscheme()
         set(0, k, v)
     end
 end
+
 return M
