@@ -16,6 +16,7 @@ return {
             function()
                 require('conform').format()
             end,
+            desc = 'Conform: Format'
         },
     },
     lazy = false,
