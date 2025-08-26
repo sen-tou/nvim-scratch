@@ -61,7 +61,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- compile a cmake project
-vim.keymap.set("n", "<leader>cc", function() vim.cmd('!cmake --build build') end, { desc = 'Build CMake Project in the current dir' })
-vim.keymap.set("n", "<leader>ck", function() vim.cmd('!cmake -S . -B build') end, { desc = 'Configure CMake Project in the current dir' })
+vim.keymap.set("n", "<leader>cc", function() vim.cmd('!cmake --build build') end,
+    { desc = 'Build CMake Project in the current dir' })
+vim.keymap.set("n", "<leader>ck", function() vim.cmd('!cmake -S . -B build') end,
+    { desc = 'Configure CMake Project in the current dir' })
+
+-- more lsp stuff
+vim.keymap.set("n", "grD", vim.lsp.buf.declaration, { desc = 'Jump to declaration' })
+vim.keymap.set("n", "grd", vim.lsp.buf.definition, { desc = 'Jump to definition' })
 
 return {}
