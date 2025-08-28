@@ -24,6 +24,11 @@ require('lazy').setup { {
     import = 'plugins',
 } }
 
+-- custom filetypes
+vim.filetype.add({
+    pattern = { ['.froog_config'] = 'toml' }
+})
+
 -- setup lsp neovim 0.11
 vim.lsp.enable { 'clangd', 'lua_ls', 'cmake', 'json-lsp' }
 vim.diagnostic.config {
