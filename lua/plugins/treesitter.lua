@@ -12,6 +12,7 @@ return {
         'vimdoc',
         'markdown',
         'markdown_inline',
+        'python'
     },
     opts = {},
 }
