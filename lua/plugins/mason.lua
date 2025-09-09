@@ -17,7 +17,13 @@ table.insert(M, {
         require('mason-lspconfig').setup()
         require('mason-tool-installer').setup {
             ensure_installed = {
-                'lua_ls', 'cmake', 'jsonls', 'clangd', 'taplo', 'basedpyright'
+                'lua_ls',
+                'cmake',
+                'jsonls',
+                'clangd',
+                'taplo',
+                'basedpyright',
+                'stylua',
             },
         }
     end,

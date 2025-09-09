@@ -1,40 +1,51 @@
-vim.g.netrw_banner = 0
+local g = vim.g
+local opt = vim.opt
+
+g.netrw_banner = 0
 
 -- map leader key
 vim.keymap.set('', '<Space>', '<Nop>')
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+g.mapleader = ' '
+g.maplocalleader = ' '
 
-vim.g.editorconfig = true
+g.editorconfig = true
 
 -- some options
-vim.opt.number = true
-vim.opt.relativenumber = true
+opt.number = true
+opt.relativenumber = true
 
 -- scrolloff to the top and bottom of the buffer
-vim.opt.scrolloff = 20
+opt.scrolloff = 20
 
 -- default tabs/spaces config (will be overriden by detection plugin as needed)
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.autoindent = true
-vim.opt.smartindent = true
-vim.opt.wrap = false
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
+opt.autoindent = true
+opt.smartindent = true
+opt.wrap = false
+
+-- search and replace
+opt.smartcase = true
+opt.ignorecase = true
+opt.inccommand = 'split'
 
 -- status line settings
-vim.opt.laststatus = 3
--- vim.opt.cmdheight = 0
+opt.laststatus = 3
+-- o.cmdheight = 0
 
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undofile = true
+opt.swapfile = false
+opt.backup = false
+opt.undofile = true
 
-vim.opt.termguicolors = true
-vim.opt.background = 'dark'
-vim.opt.signcolumn = 'yes'
+opt.termguicolors = true
+opt.background = 'dark'
+opt.signcolumn = 'yes'
 
-vim.opt.backspace = { 'start', 'eol', 'indent' }
+opt.backspace = { 'start', 'eol', 'indent' }
+
+opt.splitbelow = true
+opt.splitright = true
 
 return {}
