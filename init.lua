@@ -2,6 +2,7 @@
 require 'core.utils'
 require 'core.opts'
 require 'core.keymap'
+require 'core.cmd'
 
 -- custom theme setup
 local blueberry = require 'blueberry'
